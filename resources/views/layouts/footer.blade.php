@@ -1,9 +1,6 @@
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Back to top</a>
-        </p>
-        <p>MIT Licensed</p>
-        <p>Built with Laravel and Bootstrap</p>
-    </div>
+<footer class="blog-footer">
+    <p>Built with Laravel and Bootstrap. MIT Licensed.</p>
+    <p>
+        <a href="#">Back to top</a>
+    </p>
 </footer>

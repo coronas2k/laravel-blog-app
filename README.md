@@ -1,6 +1,6 @@
 ## Laravel Blog App
 
-**This is my first application utilizing Laravel and PHP7. Focused on learning various aspects of Laravel. Especially the Eloquent ORM models, Autoloading and Controller-Model relationships**
+**This is my first application utilizing Laravel and PHP7. Focused on learning various aspects of Laravel. Especially Autoloading, Eloquent Controller-Model relationships & Git/Hithub usage**
 
 * I last utilized PHP around 2009, back then it was a whole different language. Creating this blog application helped me learn more about PHP5 & PHP7 features.
 
