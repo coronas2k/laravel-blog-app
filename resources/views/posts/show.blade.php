@@ -3,7 +3,7 @@
 @section('title', $postTitleEscaped)
 
 @section('content')
-<div class="col-md-8 blog-main">
+<div class="col-md-12 blog-main">
 
 <div class="blog-post">
         <h2 class="blog-post-title">{{ $postTitle }}</h2>
