@@ -8,7 +8,7 @@ use App\Http\Controllers\TasksController;
 // Post Controlller
 Route::get('/', 'PostsController@index');
 
-Route::get('post/{post}', 'PostsController@show');
+Route::get('post/{post}', 'PostsController@show')->name('posts.show');
 
 Route::get('posts/create', 'PostsController@create');
 
