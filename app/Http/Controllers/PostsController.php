@@ -1,8 +1,14 @@
 <?php
 /**
+ * PostsController
  * Posts Resource Controller
+ * php version 7.3
  *
- * @package App\Http\Controllers\PostsController
+ * @category Controllers
+ * @package Laravel Blog App
+ * @author Nayef Alebrahim <nayef@alebrah.im>
+ * @license https://opensource.org/licenses/MIT MIT
+ * @link https://nayefalebrahim.com
  */
 namespace App\Http\Controllers;
 
@@ -61,6 +67,13 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        // Validate
+        $request->validate(
+            [
+                'title' => 'required',
+                'body' => 'required'
+            ]
+        );
         // create post
         Post::create(
             [
