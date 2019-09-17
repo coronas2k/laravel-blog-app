@@ -13,7 +13,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreBlogPost;
 
 class PostsController extends Controller
 {
@@ -59,21 +59,13 @@ class PostsController extends Controller
     }
 
     /**
-     * PostController store
+     * Store the blog post
      *
-     * @param Illuminate\Http\Request $request Request injection
-     *
-     * @return Illuminate\Http\RedirectResponse
+     * @param StoreBlogPost $request Form Request Validation
+     * @return Response
      */
-    public function store(Request $request)
+    public function store(StoreBlogPost $request)
     {
-        // Validate
-        $request->validate(
-            [
-                'title' => 'required',
-                'body' => 'required'
-            ]
-        );
         // create post
         Post::create(
             [
