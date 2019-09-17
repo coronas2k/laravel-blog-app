@@ -17,9 +17,7 @@
                         <input type="text" class="form-control form-control-lg @error('title') is-invalid @enderror"
                             id="createPostTitle" placeholder="Post Title" name="title" autofocus required>
                         @error('title')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
+                        @include('layouts.error')
                         @enderror
                     </div>
                     <div class="form-group">
@@ -27,9 +25,7 @@
                         <textarea class="form-control @error('body') is-invalid @enderror" id="body" rows="9"
                             name="body" required></textarea>
                         @error('body')
-                        <div class="invalid-feedback">
-                            {{ $message }}
-                        </div>
+                        @include('layouts.error')
                         @enderror
                     </div>
                     <div class="form-group">
