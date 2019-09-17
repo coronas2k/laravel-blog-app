@@ -8,4 +8,8 @@ class Post extends Model
     {
         return self::latest()->get();
     }
+    public function getHumanTime()
+    {
+        return $this->created_at->diffForHumans();
+    }
 }

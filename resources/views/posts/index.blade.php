@@ -9,12 +9,9 @@
 @if(!$posts->isEmpty())
 
 @foreach($posts as $post)
-      <div class="blog-post">
-        <h2 class="blog-post-title">{{ $post->title }}</h2>
-        <p class="blog-post-meta">{{ $post->created_at->diffForHumans() }} by <a href="#">Mark</a></p>
 
-        <p>{{ $post->body }}</p>
-      </div><!-- /.blog-post -->
+@include('layouts.post')
+
 @endforeach
 
 <nav class="blog-pagination">

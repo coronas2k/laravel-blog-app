@@ -25,7 +25,7 @@ class PostsController extends Controller
     public function index()
     {
         $posts = Post::getSortedByLatest();
-        return view('posts.index', ['posts' => $posts]);
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -37,15 +37,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        return view(
-            'posts.show',
-            [
-            'postTitleEscaped' => htmlspecialchars($post->title),
-            'postTitle' => $post->title,
-            'postBody' => $post->body,
-            'postRealTime' => $post->created_at->diffForHumans()
-            ]
-        );
+        return view('posts.show', compact('post'));
     }
 
     /**
